@@ -1,0 +1,18 @@
+{
+    "name": "AlexSuperStar/diadocProtoClass",
+    "description": "PHP Diadoc Proto Class",
+    "type": "library",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Alexey Starikov",
+            "email": "alexsuperstar@mail.ru"
+        }
+    ],
+    "require": {"php":">=5.3.0"},
+    "autoload": {
+        "psr-4": {    
+            "Diadoc\\": "src/Diadoc/"
+        }
+    }
+}
