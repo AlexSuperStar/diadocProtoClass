@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto generated from Recognition.proto at 2016-09-02 13:32:42
+ * Auto generated from Recognition.proto at 2016-10-06 18:08:24
  *
  * Diadoc.Api.Proto.Recognition package
  */

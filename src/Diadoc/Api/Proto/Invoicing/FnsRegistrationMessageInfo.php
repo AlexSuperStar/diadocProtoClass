@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto generated from FnsRegistrationMessageInfo.proto at 2016-09-02 13:32:04
+ * Auto generated from FnsRegistrationMessageInfo.proto at 2016-10-06 18:08:58
  *
  * Diadoc.Api.Proto.Invoicing package
  */

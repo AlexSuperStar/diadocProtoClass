@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto generated from BilateralDocflow.proto at 2016-09-02 13:33:34
+ * Auto generated from BilateralDocflow.proto at 2016-10-06 18:08:10
  *
  * Diadoc.Api.Proto.Docflow package
  */

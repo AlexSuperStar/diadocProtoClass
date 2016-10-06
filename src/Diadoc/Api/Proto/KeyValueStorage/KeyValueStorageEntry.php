@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto generated from KeyValueStorage.proto at 2016-09-02 13:32:22
+ * Auto generated from KeyValueStorage.proto at 2016-10-06 18:08:39
  *
  * Diadoc.Api.Proto.KeyValueStorage package
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto generated from UnilateralDocument.proto at 2016-09-02 13:31:45
+ * Auto generated from UnilateralDocument.proto at 2016-10-06 18:09:24
  *
  * Diadoc.Api.Proto.Documents.UnilateralDocument package
  */
