@@ -14,5 +14,6 @@
         "psr-4": {    
             "Diadoc\\": "src/Diadoc/"
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
