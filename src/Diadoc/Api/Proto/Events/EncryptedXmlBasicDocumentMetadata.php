@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -14,6 +14,7 @@ class EncryptedXmlBasicDocumentMetadata extends \ProtobufMessage
     /* Field index constants */
     const FORMATIONDATE = 1;
     const FORMATIONTIME = 2;
+    const DOCUMENTNAME = 3;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -25,6 +26,11 @@ class EncryptedXmlBasicDocumentMetadata extends \ProtobufMessage
         self::FORMATIONTIME => array(
             'name' => 'FormationTime',
             'required' => true,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
+        self::DOCUMENTNAME => array(
+            'name' => 'DocumentName',
+            'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
     );
@@ -46,6 +52,7 @@ class EncryptedXmlBasicDocumentMetadata extends \ProtobufMessage
     {
         $this->values[self::FORMATIONDATE] = null;
         $this->values[self::FORMATIONTIME] = null;
+        $this->values[self::DOCUMENTNAME] = null;
     }
 
     /**
@@ -101,6 +108,29 @@ class EncryptedXmlBasicDocumentMetadata extends \ProtobufMessage
     public function getFormationTime()
     {
         $value = $this->get(self::FORMATIONTIME);
+        return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'DocumentName' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setDocumentName($value)
+    {
+        return $this->set(self::DOCUMENTNAME, $value);
+    }
+
+    /**
+     * Returns value of 'DocumentName' property
+     *
+     * @return string
+     */
+    public function getDocumentName()
+    {
+        $value = $this->get(self::DOCUMENTNAME);
         return $value === null ? (string)$value : $value;
     }
 }

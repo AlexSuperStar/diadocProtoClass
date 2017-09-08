@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Torg12Info.proto at 2016-10-06 18:08:58
- *
+* Auto generated from Torg12Info.proto
+*
  * Diadoc.Api.Proto.Invoicing package
  */
 

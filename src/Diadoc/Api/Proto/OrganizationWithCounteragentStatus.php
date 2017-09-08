@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from GetOrganizationsByInnList.proto at 2016-09-02 13:31:24
- *
+* Auto generated from GetOrganizationsByInnList.proto
+*
  * Diadoc.Api.Proto package
  */
 
@@ -14,6 +14,7 @@ class OrganizationWithCounteragentStatus extends \ProtobufMessage
     /* Field index constants */
     const ORGANIZATION = 1;
     const COUNTERAGENTSTATUS = 2;
+    const LASTEVENTTIMESTAMPTICKS = 3;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -27,6 +28,11 @@ class OrganizationWithCounteragentStatus extends \ProtobufMessage
             'name' => 'CounteragentStatus',
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_INT,
+        ),
+        self::LASTEVENTTIMESTAMPTICKS => array(
+            'name' => 'LastEventTimestampTicks',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_FIXED64,
         ),
     );
 
@@ -47,6 +53,7 @@ class OrganizationWithCounteragentStatus extends \ProtobufMessage
     {
         $this->values[self::ORGANIZATION] = null;
         $this->values[self::COUNTERAGENTSTATUS] = self::$fields[self::COUNTERAGENTSTATUS]['default'];
+        $this->values[self::LASTEVENTTIMESTAMPTICKS] = null;
     }
 
     /**
@@ -101,6 +108,29 @@ class OrganizationWithCounteragentStatus extends \ProtobufMessage
     public function getCounteragentStatus()
     {
         $value = $this->get(self::COUNTERAGENTSTATUS);
+        return $value === null ? (integer)$value : $value;
+    }
+
+    /**
+     * Sets value of 'LastEventTimestampTicks' property
+     *
+     * @param integer $value Property value
+     *
+     * @return null
+     */
+    public function setLastEventTimestampTicks($value)
+    {
+        return $this->set(self::LASTEVENTTIMESTAMPTICKS, $value);
+    }
+
+    /**
+     * Returns value of 'LastEventTimestampTicks' property
+     *
+     * @return integer
+     */
+    public function getLastEventTimestampTicks()
+    {
+        $value = $this->get(self::LASTEVENTTIMESTAMPTICKS);
         return $value === null ? (integer)$value : $value;
     }
 }

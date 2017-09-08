@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Organization.proto at 2016-09-02 13:31:24
- *
+* Auto generated from Organization.proto
+*
  * Diadoc.Api.Proto package
  */
 
@@ -32,6 +32,9 @@ class Organization extends \ProtobufMessage
     const ISEMPLOYEE = 19;
     const INVITATIONCOUNT = 20;
     const SEARCHCOUNT = 21;
+    const SOCIABILITY = 22;
+    const LIQUIDATIONDATE = 23;
+    const CERTIFICATEOFREGISTRYINFO = 24;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -135,6 +138,21 @@ class Organization extends \ProtobufMessage
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_INT,
         ),
+        self::SOCIABILITY => array(
+            'name' => 'Sociability',
+            'required' => true,
+            'type' => \ProtobufMessage::PB_TYPE_INT,
+        ),
+        self::LIQUIDATIONDATE => array(
+            'name' => 'LiquidationDate',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
+        self::CERTIFICATEOFREGISTRYINFO => array(
+            'name' => 'CertificateOfRegistryInfo',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
     );
 
     /**
@@ -172,6 +190,9 @@ class Organization extends \ProtobufMessage
         $this->values[self::ISEMPLOYEE] = null;
         $this->values[self::INVITATIONCOUNT] = null;
         $this->values[self::SEARCHCOUNT] = null;
+        $this->values[self::SOCIABILITY] = null;
+        $this->values[self::LIQUIDATIONDATE] = null;
+        $this->values[self::CERTIFICATEOFREGISTRYINFO] = null;
     }
 
     /**
@@ -723,6 +744,75 @@ class Organization extends \ProtobufMessage
     {
         $value = $this->get(self::SEARCHCOUNT);
         return $value === null ? (integer)$value : $value;
+    }
+
+    /**
+     * Sets value of 'Sociability' property
+     *
+     * @param integer $value Property value
+     *
+     * @return null
+     */
+    public function setSociability($value)
+    {
+        return $this->set(self::SOCIABILITY, $value);
+    }
+
+    /**
+     * Returns value of 'Sociability' property
+     *
+     * @return integer
+     */
+    public function getSociability()
+    {
+        $value = $this->get(self::SOCIABILITY);
+        return $value === null ? (integer)$value : $value;
+    }
+
+    /**
+     * Sets value of 'LiquidationDate' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setLiquidationDate($value)
+    {
+        return $this->set(self::LIQUIDATIONDATE, $value);
+    }
+
+    /**
+     * Returns value of 'LiquidationDate' property
+     *
+     * @return string
+     */
+    public function getLiquidationDate()
+    {
+        $value = $this->get(self::LIQUIDATIONDATE);
+        return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'CertificateOfRegistryInfo' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setCertificateOfRegistryInfo($value)
+    {
+        return $this->set(self::CERTIFICATEOFREGISTRYINFO, $value);
+    }
+
+    /**
+     * Returns value of 'CertificateOfRegistryInfo' property
+     *
+     * @return string
+     */
+    public function getCertificateOfRegistryInfo()
+    {
+        $value = $this->get(self::CERTIFICATEOFREGISTRYINFO);
+        return $value === null ? (string)$value : $value;
     }
 }
 }

@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Counteragent.proto at 2016-09-02 13:31:24
- *
+* Auto generated from Counteragent.proto
+*
  * Diadoc.Api.Proto package
  */
 

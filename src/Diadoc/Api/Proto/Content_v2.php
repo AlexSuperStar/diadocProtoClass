@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Content_v2.proto at 2016-09-02 13:31:24
- *
+* Auto generated from Content_v2.proto
+*
  * Diadoc.Api.Proto package
  */
 

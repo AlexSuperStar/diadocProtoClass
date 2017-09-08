@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from OrganizationInfo.proto at 2016-10-06 18:08:58
- *
+* Auto generated from OrganizationInfo.proto
+*
  * Diadoc.Api.Proto.Invoicing package
  */
 

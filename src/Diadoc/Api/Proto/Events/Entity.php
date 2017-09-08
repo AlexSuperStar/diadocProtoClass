@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-GetApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-GetApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -31,6 +31,10 @@ class Entity extends \ProtobufMessage
     const PACKETID = 18;
     const ISAPPROVEMENTSIGNATURE = 19;
     const ISENCRYPTEDCONTENT = 20;
+    const ATTACHMENTVERSION = 21;
+    const RESOLUTIONROUTEASSIGNMENTINFO = 22;
+    const RESOLUTIONROUTEREMOVALINFO = 23;
+    const CANCELLATIONINFO = 24;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -136,6 +140,26 @@ class Entity extends \ProtobufMessage
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_BOOL,
         ),
+        self::ATTACHMENTVERSION => array(
+            'name' => 'AttachmentVersion',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
+        self::RESOLUTIONROUTEASSIGNMENTINFO => array(
+            'name' => 'ResolutionRouteAssignmentInfo',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Events\ResolutionRouteAssignmentInfo'
+        ),
+        self::RESOLUTIONROUTEREMOVALINFO => array(
+            'name' => 'ResolutionRouteRemovalInfo',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Events\ResolutionRouteRemovalInfo'
+        ),
+        self::CANCELLATIONINFO => array(
+            'name' => 'CancellationInfo',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Events\CancellationInfo'
+        ),
     );
 
     /**
@@ -172,6 +196,10 @@ class Entity extends \ProtobufMessage
         $this->values[self::PACKETID] = null;
         $this->values[self::ISAPPROVEMENTSIGNATURE] = self::$fields[self::ISAPPROVEMENTSIGNATURE]['default'];
         $this->values[self::ISENCRYPTEDCONTENT] = self::$fields[self::ISENCRYPTEDCONTENT]['default'];
+        $this->values[self::ATTACHMENTVERSION] = null;
+        $this->values[self::RESOLUTIONROUTEASSIGNMENTINFO] = null;
+        $this->values[self::RESOLUTIONROUTEREMOVALINFO] = null;
+        $this->values[self::CANCELLATIONINFO] = null;
     }
 
     /**
@@ -614,6 +642,95 @@ class Entity extends \ProtobufMessage
     {
         $value = $this->get(self::ISENCRYPTEDCONTENT);
         return $value === null ? (boolean)$value : $value;
+    }
+
+    /**
+     * Sets value of 'AttachmentVersion' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setAttachmentVersion($value)
+    {
+        return $this->set(self::ATTACHMENTVERSION, $value);
+    }
+
+    /**
+     * Returns value of 'AttachmentVersion' property
+     *
+     * @return string
+     */
+    public function getAttachmentVersion()
+    {
+        $value = $this->get(self::ATTACHMENTVERSION);
+        return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'ResolutionRouteAssignmentInfo' property
+     *
+     * @param \Diadoc\Api\Proto\Events\ResolutionRouteAssignmentInfo $value Property value
+     *
+     * @return null
+     */
+    public function setResolutionRouteAssignmentInfo(\Diadoc\Api\Proto\Events\ResolutionRouteAssignmentInfo $value=null)
+    {
+        return $this->set(self::RESOLUTIONROUTEASSIGNMENTINFO, $value);
+    }
+
+    /**
+     * Returns value of 'ResolutionRouteAssignmentInfo' property
+     *
+     * @return \Diadoc\Api\Proto\Events\ResolutionRouteAssignmentInfo
+     */
+    public function getResolutionRouteAssignmentInfo()
+    {
+        return $this->get(self::RESOLUTIONROUTEASSIGNMENTINFO);
+    }
+
+    /**
+     * Sets value of 'ResolutionRouteRemovalInfo' property
+     *
+     * @param \Diadoc\Api\Proto\Events\ResolutionRouteRemovalInfo $value Property value
+     *
+     * @return null
+     */
+    public function setResolutionRouteRemovalInfo(\Diadoc\Api\Proto\Events\ResolutionRouteRemovalInfo $value=null)
+    {
+        return $this->set(self::RESOLUTIONROUTEREMOVALINFO, $value);
+    }
+
+    /**
+     * Returns value of 'ResolutionRouteRemovalInfo' property
+     *
+     * @return \Diadoc\Api\Proto\Events\ResolutionRouteRemovalInfo
+     */
+    public function getResolutionRouteRemovalInfo()
+    {
+        return $this->get(self::RESOLUTIONROUTEREMOVALINFO);
+    }
+
+    /**
+     * Sets value of 'CancellationInfo' property
+     *
+     * @param \Diadoc\Api\Proto\Events\CancellationInfo $value Property value
+     *
+     * @return null
+     */
+    public function setCancellationInfo(\Diadoc\Api\Proto\Events\CancellationInfo $value=null)
+    {
+        return $this->set(self::CANCELLATIONINFO, $value);
+    }
+
+    /**
+     * Returns value of 'CancellationInfo' property
+     *
+     * @return \Diadoc\Api\Proto\Events\CancellationInfo
+     */
+    public function getCancellationInfo()
+    {
+        return $this->get(self::CANCELLATIONINFO);
     }
 }
 }

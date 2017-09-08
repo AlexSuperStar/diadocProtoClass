@@ -1,29 +1,29 @@
 <?php
 /**
- * Auto generated from ResolutionChainList.proto at 2016-09-02 13:31:24
- *
- * Diadoc.Api.Proto package
+* Auto generated from ResolutionRouteInfo.proto
+*
+ * Diadoc.Api.Proto.Events package
  */
 
-namespace Diadoc\Api\Proto {
+namespace Diadoc\Api\Proto\Events {
 /**
- * ResolutionChain message
+ * ResolutionRouteAssignmentInfo message
  */
-class ResolutionChain extends \ProtobufMessage
+class ResolutionRouteAssignmentInfo extends \ProtobufMessage
 {
     /* Field index constants */
-    const CHAINID = 1;
-    const NAME = 2;
+    const ROUTEID = 1;
+    const AUTHOR = 2;
 
     /* @var array Field descriptors */
     protected static $fields = array(
-        self::CHAINID => array(
-            'name' => 'ChainId',
+        self::ROUTEID => array(
+            'name' => 'RouteId',
             'required' => true,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
-        self::NAME => array(
-            'name' => 'Name',
+        self::AUTHOR => array(
+            'name' => 'Author',
             'required' => true,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
@@ -44,8 +44,8 @@ class ResolutionChain extends \ProtobufMessage
      */
     public function reset()
     {
-        $this->values[self::CHAINID] = null;
-        $this->values[self::NAME] = null;
+        $this->values[self::ROUTEID] = null;
+        $this->values[self::AUTHOR] = null;
     }
 
     /**
@@ -59,48 +59,48 @@ class ResolutionChain extends \ProtobufMessage
     }
 
     /**
-     * Sets value of 'ChainId' property
+     * Sets value of 'RouteId' property
      *
      * @param string $value Property value
      *
      * @return null
      */
-    public function setChainId($value)
+    public function setRouteId($value)
     {
-        return $this->set(self::CHAINID, $value);
+        return $this->set(self::ROUTEID, $value);
     }
 
     /**
-     * Returns value of 'ChainId' property
+     * Returns value of 'RouteId' property
      *
      * @return string
      */
-    public function getChainId()
+    public function getRouteId()
     {
-        $value = $this->get(self::CHAINID);
+        $value = $this->get(self::ROUTEID);
         return $value === null ? (string)$value : $value;
     }
 
     /**
-     * Sets value of 'Name' property
+     * Sets value of 'Author' property
      *
      * @param string $value Property value
      *
      * @return null
      */
-    public function setName($value)
+    public function setAuthor($value)
     {
-        return $this->set(self::NAME, $value);
+        return $this->set(self::AUTHOR, $value);
     }
 
     /**
-     * Returns value of 'Name' property
+     * Returns value of 'Author' property
      *
      * @return string
      */
-    public function getName()
+    public function getAuthor()
     {
-        $value = $this->get(self::NAME);
+        $value = $this->get(self::AUTHOR);
         return $value === null ? (string)$value : $value;
     }
 }

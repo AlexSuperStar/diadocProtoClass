@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from XmlBilateralDocflow.proto at 2016-10-06 18:08:10
- *
+* Auto generated from XmlBilateralDocflow.proto
+*
  * Diadoc.Api.Proto.Docflow package
  */
 

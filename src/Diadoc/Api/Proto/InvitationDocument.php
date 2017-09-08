@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from AcquireCounteragent.proto at 2016-09-02 13:31:24
- *
+* Auto generated from AcquireCounteragent.proto
+*
  * Diadoc.Api.Proto package
  */
 
@@ -15,6 +15,7 @@ class InvitationDocument extends \ProtobufMessage
     const SIGNEDCONTENT = 1;
     const FILENAME = 2;
     const SIGNATUREREQUESTED = 3;
+    const TYPE = 4;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -33,6 +34,11 @@ class InvitationDocument extends \ProtobufMessage
             'name' => 'SignatureRequested',
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_BOOL,
+        ),
+        self::TYPE => array(
+            'name' => 'Type',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
     );
 
@@ -54,6 +60,7 @@ class InvitationDocument extends \ProtobufMessage
         $this->values[self::SIGNEDCONTENT] = null;
         $this->values[self::FILENAME] = null;
         $this->values[self::SIGNATUREREQUESTED] = self::$fields[self::SIGNATUREREQUESTED]['default'];
+        $this->values[self::TYPE] = null;
     }
 
     /**
@@ -132,6 +139,29 @@ class InvitationDocument extends \ProtobufMessage
     {
         $value = $this->get(self::SIGNATUREREQUESTED);
         return $value === null ? (boolean)$value : $value;
+    }
+
+    /**
+     * Sets value of 'Type' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setType($value)
+    {
+        return $this->set(self::TYPE, $value);
+    }
+
+    /**
+     * Returns value of 'Type' property
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        $value = $this->get(self::TYPE);
+        return $value === null ? (string)$value : $value;
     }
 }
 }

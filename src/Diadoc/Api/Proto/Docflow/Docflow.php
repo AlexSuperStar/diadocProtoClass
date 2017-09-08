@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Docflow.proto at 2016-10-06 18:08:10
- *
+* Auto generated from Docflow.proto
+*
  * Diadoc.Api.Proto.Docflow package
  */
 
@@ -29,6 +29,8 @@ class Docflow extends \ProtobufMessage
     const CANDOCUMENTBEREVOKEDUNILATERALLYBYSENDER = 15;
     const PACKETID = 16;
     const CUSTOMDATA = 17;
+    const INBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW = 18;
+    const OUTBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW = 19;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -117,6 +119,16 @@ class Docflow extends \ProtobufMessage
             'repeated' => true,
             'type' => '\Diadoc\Api\Proto\CustomDataItem'
         ),
+        self::INBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW => array(
+            'name' => 'InboundUniversalTransferDocumentDocflow',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Docflow\InboundUniversalTransferDocumentDocflow'
+        ),
+        self::OUTBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW => array(
+            'name' => 'OutboundUniversalTransferDocumentDocflow',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Docflow\OutboundUniversalTransferDocumentDocflow'
+        ),
     );
 
     /**
@@ -151,6 +163,8 @@ class Docflow extends \ProtobufMessage
         $this->values[self::CANDOCUMENTBEREVOKEDUNILATERALLYBYSENDER] = null;
         $this->values[self::PACKETID] = null;
         $this->values[self::CUSTOMDATA] = array();
+        $this->values[self::INBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW] = null;
+        $this->values[self::OUTBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW] = null;
     }
 
     /**
@@ -582,6 +596,50 @@ class Docflow extends \ProtobufMessage
     public function getCustomDataCount()
     {
         return $this->count(self::CUSTOMDATA);
+    }
+
+    /**
+     * Sets value of 'InboundUniversalTransferDocumentDocflow' property
+     *
+     * @param \Diadoc\Api\Proto\Docflow\InboundUniversalTransferDocumentDocflow $value Property value
+     *
+     * @return null
+     */
+    public function setInboundUniversalTransferDocumentDocflow(\Diadoc\Api\Proto\Docflow\InboundUniversalTransferDocumentDocflow $value=null)
+    {
+        return $this->set(self::INBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW, $value);
+    }
+
+    /**
+     * Returns value of 'InboundUniversalTransferDocumentDocflow' property
+     *
+     * @return \Diadoc\Api\Proto\Docflow\InboundUniversalTransferDocumentDocflow
+     */
+    public function getInboundUniversalTransferDocumentDocflow()
+    {
+        return $this->get(self::INBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW);
+    }
+
+    /**
+     * Sets value of 'OutboundUniversalTransferDocumentDocflow' property
+     *
+     * @param \Diadoc\Api\Proto\Docflow\OutboundUniversalTransferDocumentDocflow $value Property value
+     *
+     * @return null
+     */
+    public function setOutboundUniversalTransferDocumentDocflow(\Diadoc\Api\Proto\Docflow\OutboundUniversalTransferDocumentDocflow $value=null)
+    {
+        return $this->set(self::OUTBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW, $value);
+    }
+
+    /**
+     * Returns value of 'OutboundUniversalTransferDocumentDocflow' property
+     *
+     * @return \Diadoc\Api\Proto\Docflow\OutboundUniversalTransferDocumentDocflow
+     */
+    public function getOutboundUniversalTransferDocumentDocflow()
+    {
+        return $this->get(self::OUTBOUNDUNIVERSALTRANSFERDOCUMENTDOCFLOW);
     }
 }
 }

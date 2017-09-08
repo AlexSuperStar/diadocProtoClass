@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from AcceptanceCertificateDocument.proto at 2016-10-06 18:09:24
- *
+* Auto generated from AcceptanceCertificateDocument.proto
+*
  * Diadoc.Api.Proto.Documents.AcceptanceCertificateDocument package
  */
 

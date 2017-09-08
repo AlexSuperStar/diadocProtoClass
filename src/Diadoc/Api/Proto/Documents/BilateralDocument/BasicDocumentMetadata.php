@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from BilateralDocument.proto at 2016-10-06 18:09:24
- *
+* Auto generated from BilateralDocument.proto
+*
  * Diadoc.Api.Proto.Documents.BilateralDocument package
  */
 
@@ -17,6 +17,8 @@ class BasicDocumentMetadata extends \ProtobufMessage
     const VAT = 3;
     const GROUNDS = 4;
     const RECEIPTSTATUS = 5;
+    const REVISIONDATE = 6;
+    const REVISIONNUMBER = 7;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -47,6 +49,16 @@ class BasicDocumentMetadata extends \ProtobufMessage
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_INT,
         ),
+        self::REVISIONDATE => array(
+            'name' => 'RevisionDate',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
+        self::REVISIONNUMBER => array(
+            'name' => 'RevisionNumber',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
     );
 
     /**
@@ -69,6 +81,8 @@ class BasicDocumentMetadata extends \ProtobufMessage
         $this->values[self::VAT] = null;
         $this->values[self::GROUNDS] = null;
         $this->values[self::RECEIPTSTATUS] = self::$fields[self::RECEIPTSTATUS]['default'];
+        $this->values[self::REVISIONDATE] = null;
+        $this->values[self::REVISIONNUMBER] = null;
     }
 
     /**
@@ -194,6 +208,52 @@ class BasicDocumentMetadata extends \ProtobufMessage
     {
         $value = $this->get(self::RECEIPTSTATUS);
         return $value === null ? (integer)$value : $value;
+    }
+
+    /**
+     * Sets value of 'RevisionDate' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setRevisionDate($value)
+    {
+        return $this->set(self::REVISIONDATE, $value);
+    }
+
+    /**
+     * Returns value of 'RevisionDate' property
+     *
+     * @return string
+     */
+    public function getRevisionDate()
+    {
+        $value = $this->get(self::REVISIONDATE);
+        return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'RevisionNumber' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setRevisionNumber($value)
+    {
+        return $this->set(self::REVISIONNUMBER, $value);
+    }
+
+    /**
+     * Returns value of 'RevisionNumber' property
+     *
+     * @return string
+     */
+    public function getRevisionNumber()
+    {
+        $value = $this->get(self::REVISIONNUMBER);
+        return $value === null ? (string)$value : $value;
     }
 }
 }

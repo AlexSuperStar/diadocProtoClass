@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from ResolutionInfo.proto at 2016-09-02 13:31:45
- *
+* Auto generated from ResolutionInfo.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 

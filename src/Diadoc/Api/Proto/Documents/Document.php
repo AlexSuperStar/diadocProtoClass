@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Document.proto at 2016-10-06 18:09:24
- *
+* Auto generated from Document.proto
+*
  * Diadoc.Api.Proto.Documents package
  */
 
@@ -65,6 +65,13 @@ class Document extends \ProtobufMessage
     const PACKETISLOCKED = 53;
     const PRICELISTAGREEMENTMETADATA = 54;
     const CERTIFICATEREGISTRYMETADATA = 55;
+    const UNIVERSALTRANSFERDOCUMENTMETADATA = 56;
+    const UNIVERSALTRANSFERDOCUMENTREVISIONMETADATA = 57;
+    const UNIVERSALCORRECTIONDOCUMENTMETADATA = 58;
+    const UNIVERSALCORRECTIONDOCUMENTREVISIONMETADATA = 59;
+    const RESOLUTIONROUTEID = 60;
+    const ATTACHMENTVERSION = 61;
+    const PROXYSIGNATURESTATUS = 62;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -343,6 +350,42 @@ class Document extends \ProtobufMessage
             'required' => false,
             'type' => '\Diadoc\Api\Proto\Documents\NonformalizedDocument\NonformalizedDocumentMetadata'
         ),
+        self::UNIVERSALTRANSFERDOCUMENTMETADATA => array(
+            'name' => 'UniversalTransferDocumentMetadata',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentMetadata'
+        ),
+        self::UNIVERSALTRANSFERDOCUMENTREVISIONMETADATA => array(
+            'name' => 'UniversalTransferDocumentRevisionMetadata',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentRevisionMetadata'
+        ),
+        self::UNIVERSALCORRECTIONDOCUMENTMETADATA => array(
+            'name' => 'UniversalCorrectionDocumentMetadata',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentMetadata'
+        ),
+        self::UNIVERSALCORRECTIONDOCUMENTREVISIONMETADATA => array(
+            'name' => 'UniversalCorrectionDocumentRevisionMetadata',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentRevisionMetadata'
+        ),
+        self::RESOLUTIONROUTEID => array(
+            'default' => '',
+            'name' => 'ResolutionRouteId',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
+        self::ATTACHMENTVERSION => array(
+            'name' => 'AttachmentVersion',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
+        self::PROXYSIGNATURESTATUS => array(
+            'name' => 'ProxySignatureStatus',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_INT,
+        ),
     );
 
     /**
@@ -413,6 +456,13 @@ class Document extends \ProtobufMessage
         $this->values[self::PACKETISLOCKED] = self::$fields[self::PACKETISLOCKED]['default'];
         $this->values[self::PRICELISTAGREEMENTMETADATA] = null;
         $this->values[self::CERTIFICATEREGISTRYMETADATA] = null;
+        $this->values[self::UNIVERSALTRANSFERDOCUMENTMETADATA] = null;
+        $this->values[self::UNIVERSALTRANSFERDOCUMENTREVISIONMETADATA] = null;
+        $this->values[self::UNIVERSALCORRECTIONDOCUMENTMETADATA] = null;
+        $this->values[self::UNIVERSALCORRECTIONDOCUMENTREVISIONMETADATA] = null;
+        $this->values[self::RESOLUTIONROUTEID] = self::$fields[self::RESOLUTIONROUTEID]['default'];
+        $this->values[self::ATTACHMENTVERSION] = null;
+        $this->values[self::PROXYSIGNATURESTATUS] = null;
     }
 
     /**
@@ -1785,6 +1835,163 @@ class Document extends \ProtobufMessage
     public function getCertificateRegistryMetadata()
     {
         return $this->get(self::CERTIFICATEREGISTRYMETADATA);
+    }
+
+    /**
+     * Sets value of 'UniversalTransferDocumentMetadata' property
+     *
+     * @param \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentMetadata $value Property value
+     *
+     * @return null
+     */
+    public function setUniversalTransferDocumentMetadata(\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentMetadata $value=null)
+    {
+        return $this->set(self::UNIVERSALTRANSFERDOCUMENTMETADATA, $value);
+    }
+
+    /**
+     * Returns value of 'UniversalTransferDocumentMetadata' property
+     *
+     * @return \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentMetadata
+     */
+    public function getUniversalTransferDocumentMetadata()
+    {
+        return $this->get(self::UNIVERSALTRANSFERDOCUMENTMETADATA);
+    }
+
+    /**
+     * Sets value of 'UniversalTransferDocumentRevisionMetadata' property
+     *
+     * @param \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentRevisionMetadata $value Property value
+     *
+     * @return null
+     */
+    public function setUniversalTransferDocumentRevisionMetadata(\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentRevisionMetadata $value=null)
+    {
+        return $this->set(self::UNIVERSALTRANSFERDOCUMENTREVISIONMETADATA, $value);
+    }
+
+    /**
+     * Returns value of 'UniversalTransferDocumentRevisionMetadata' property
+     *
+     * @return \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalTransferDocumentRevisionMetadata
+     */
+    public function getUniversalTransferDocumentRevisionMetadata()
+    {
+        return $this->get(self::UNIVERSALTRANSFERDOCUMENTREVISIONMETADATA);
+    }
+
+    /**
+     * Sets value of 'UniversalCorrectionDocumentMetadata' property
+     *
+     * @param \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentMetadata $value Property value
+     *
+     * @return null
+     */
+    public function setUniversalCorrectionDocumentMetadata(\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentMetadata $value=null)
+    {
+        return $this->set(self::UNIVERSALCORRECTIONDOCUMENTMETADATA, $value);
+    }
+
+    /**
+     * Returns value of 'UniversalCorrectionDocumentMetadata' property
+     *
+     * @return \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentMetadata
+     */
+    public function getUniversalCorrectionDocumentMetadata()
+    {
+        return $this->get(self::UNIVERSALCORRECTIONDOCUMENTMETADATA);
+    }
+
+    /**
+     * Sets value of 'UniversalCorrectionDocumentRevisionMetadata' property
+     *
+     * @param \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentRevisionMetadata $value Property value
+     *
+     * @return null
+     */
+    public function setUniversalCorrectionDocumentRevisionMetadata(\Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentRevisionMetadata $value=null)
+    {
+        return $this->set(self::UNIVERSALCORRECTIONDOCUMENTREVISIONMETADATA, $value);
+    }
+
+    /**
+     * Returns value of 'UniversalCorrectionDocumentRevisionMetadata' property
+     *
+     * @return \Diadoc\Api\Proto\Documents\UniversalTransferDocument\UniversalCorrectionDocumentRevisionMetadata
+     */
+    public function getUniversalCorrectionDocumentRevisionMetadata()
+    {
+        return $this->get(self::UNIVERSALCORRECTIONDOCUMENTREVISIONMETADATA);
+    }
+
+    /**
+     * Sets value of 'ResolutionRouteId' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setResolutionRouteId($value)
+    {
+        return $this->set(self::RESOLUTIONROUTEID, $value);
+    }
+
+    /**
+     * Returns value of 'ResolutionRouteId' property
+     *
+     * @return string
+     */
+    public function getResolutionRouteId()
+    {
+        $value = $this->get(self::RESOLUTIONROUTEID);
+        return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'AttachmentVersion' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setAttachmentVersion($value)
+    {
+        return $this->set(self::ATTACHMENTVERSION, $value);
+    }
+
+    /**
+     * Returns value of 'AttachmentVersion' property
+     *
+     * @return string
+     */
+    public function getAttachmentVersion()
+    {
+        $value = $this->get(self::ATTACHMENTVERSION);
+        return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'ProxySignatureStatus' property
+     *
+     * @param integer $value Property value
+     *
+     * @return null
+     */
+    public function setProxySignatureStatus($value)
+    {
+        return $this->set(self::PROXYSIGNATURESTATUS, $value);
+    }
+
+    /**
+     * Returns value of 'ProxySignatureStatus' property
+     *
+     * @return integer
+     */
+    public function getProxySignatureStatus()
+    {
+        $value = $this->get(self::PROXYSIGNATURESTATUS);
+        return $value === null ? (integer)$value : $value;
     }
 }
 }

@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DocumentType.proto at 2016-10-06 18:09:24
- *
+* Auto generated from DocumentType.proto
+*
  * Diadoc.Api.Proto package
  */
 
@@ -31,6 +31,10 @@ final class DocumentType
     const Torg13 = 37;
     const ServiceDetails = 38;
     const SupplementaryAgreement = 40;
+    const UniversalTransferDocument = 41;
+    const UniversalTransferDocumentRevision = 45;
+    const UniversalCorrectionDocument = 49;
+    const UniversalCorrectionDocumentRevision = 50;
 
     /**
      * Returns defined enum values
@@ -60,6 +64,10 @@ final class DocumentType
             'Torg13' => self::Torg13,
             'ServiceDetails' => self::ServiceDetails,
             'SupplementaryAgreement' => self::SupplementaryAgreement,
+            'UniversalTransferDocument' => self::UniversalTransferDocument,
+            'UniversalTransferDocumentRevision' => self::UniversalTransferDocumentRevision,
+            'UniversalCorrectionDocument' => self::UniversalCorrectionDocument,
+            'UniversalCorrectionDocumentRevision' => self::UniversalCorrectionDocumentRevision,
         );
     }
 }

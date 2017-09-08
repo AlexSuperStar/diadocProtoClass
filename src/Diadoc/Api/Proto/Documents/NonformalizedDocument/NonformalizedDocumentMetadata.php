@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from NonformalizedDocument.proto at 2016-10-06 18:09:24
- *
+* Auto generated from NonformalizedDocument.proto
+*
  * Diadoc.Api.Proto.Documents.NonformalizedDocument package
  */
 

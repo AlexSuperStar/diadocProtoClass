@@ -1,34 +1,35 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
 namespace Diadoc\Api\Proto\Events {
 /**
- * ResolutionChainAssignment message
+ * ResolutionRouteRemoval message
  */
-class ResolutionChainAssignment extends \ProtobufMessage
+class ResolutionRouteRemoval extends \ProtobufMessage
 {
     /* Field index constants */
-    const INITIALDOCUMENTID = 1;
-    const CHAINID = 2;
+    const PARENTENTITYID = 1;
+    const ROUTEID = 2;
     const COMMENT = 3;
 
     /* @var array Field descriptors */
     protected static $fields = array(
-        self::INITIALDOCUMENTID => array(
-            'name' => 'InitialDocumentId',
+        self::PARENTENTITYID => array(
+            'name' => 'ParentEntityId',
             'required' => true,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
-        self::CHAINID => array(
-            'name' => 'ChainId',
+        self::ROUTEID => array(
+            'name' => 'RouteId',
             'required' => true,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::COMMENT => array(
+            'default' => '',
             'name' => 'Comment',
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
@@ -50,9 +51,9 @@ class ResolutionChainAssignment extends \ProtobufMessage
      */
     public function reset()
     {
-        $this->values[self::INITIALDOCUMENTID] = null;
-        $this->values[self::CHAINID] = null;
-        $this->values[self::COMMENT] = null;
+        $this->values[self::PARENTENTITYID] = null;
+        $this->values[self::ROUTEID] = null;
+        $this->values[self::COMMENT] = self::$fields[self::COMMENT]['default'];
     }
 
     /**
@@ -66,48 +67,48 @@ class ResolutionChainAssignment extends \ProtobufMessage
     }
 
     /**
-     * Sets value of 'InitialDocumentId' property
+     * Sets value of 'ParentEntityId' property
      *
      * @param string $value Property value
      *
      * @return null
      */
-    public function setInitialDocumentId($value)
+    public function setParentEntityId($value)
     {
-        return $this->set(self::INITIALDOCUMENTID, $value);
+        return $this->set(self::PARENTENTITYID, $value);
     }
 
     /**
-     * Returns value of 'InitialDocumentId' property
+     * Returns value of 'ParentEntityId' property
      *
      * @return string
      */
-    public function getInitialDocumentId()
+    public function getParentEntityId()
     {
-        $value = $this->get(self::INITIALDOCUMENTID);
+        $value = $this->get(self::PARENTENTITYID);
         return $value === null ? (string)$value : $value;
     }
 
     /**
-     * Sets value of 'ChainId' property
+     * Sets value of 'RouteId' property
      *
      * @param string $value Property value
      *
      * @return null
      */
-    public function setChainId($value)
+    public function setRouteId($value)
     {
-        return $this->set(self::CHAINID, $value);
+        return $this->set(self::ROUTEID, $value);
     }
 
     /**
-     * Returns value of 'ChainId' property
+     * Returns value of 'RouteId' property
      *
      * @return string
      */
-    public function getChainId()
+    public function getRouteId()
     {
-        $value = $this->get(self::CHAINID);
+        $value = $this->get(self::ROUTEID);
         return $value === null ? (string)$value : $value;
     }
 

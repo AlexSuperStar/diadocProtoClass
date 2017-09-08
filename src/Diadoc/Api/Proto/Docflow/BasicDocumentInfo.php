@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DocumentInfo.proto at 2016-10-06 18:08:10
- *
+* Auto generated from DocumentInfo.proto
+*
  * Diadoc.Api.Proto.Docflow package
  */
 
@@ -16,6 +16,7 @@ class BasicDocumentInfo extends \ProtobufMessage
     const NOVAT = 2;
     const VAT = 3;
     const GROUNDS = 4;
+    const REVISIONDATEANDNUMBER = 5;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -39,6 +40,11 @@ class BasicDocumentInfo extends \ProtobufMessage
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
+        self::REVISIONDATEANDNUMBER => array(
+            'name' => 'RevisionDateAndNumber',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Docflow\DocumentDateAndNumber'
+        ),
     );
 
     /**
@@ -60,6 +66,7 @@ class BasicDocumentInfo extends \ProtobufMessage
         $this->values[self::NOVAT] = null;
         $this->values[self::VAT] = null;
         $this->values[self::GROUNDS] = null;
+        $this->values[self::REVISIONDATEANDNUMBER] = null;
     }
 
     /**
@@ -162,6 +169,28 @@ class BasicDocumentInfo extends \ProtobufMessage
     {
         $value = $this->get(self::GROUNDS);
         return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'RevisionDateAndNumber' property
+     *
+     * @param \Diadoc\Api\Proto\Docflow\DocumentDateAndNumber $value Property value
+     *
+     * @return null
+     */
+    public function setRevisionDateAndNumber(\Diadoc\Api\Proto\Docflow\DocumentDateAndNumber $value=null)
+    {
+        return $this->set(self::REVISIONDATEANDNUMBER, $value);
+    }
+
+    /**
+     * Returns value of 'RevisionDateAndNumber' property
+     *
+     * @return \Diadoc\Api\Proto\Docflow\DocumentDateAndNumber
+     */
+    public function getRevisionDateAndNumber()
+    {
+        return $this->get(self::REVISIONDATEANDNUMBER);
     }
 }
 }

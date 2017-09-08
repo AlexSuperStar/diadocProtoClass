@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Organization.proto at 2016-09-02 13:31:24
- *
+* Auto generated from Organization.proto
+*
  * Diadoc.Api.Proto package
  */
 
@@ -16,6 +16,7 @@ class Box extends \ProtobufMessage
     const TITLE = 2;
     const ORGANIZATION = 3;
     const INVOICEFORMATVERSION = 4;
+    const ENCRYPTEDDOCUMENTSALLOWED = 5;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -40,6 +41,11 @@ class Box extends \ProtobufMessage
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_INT,
         ),
+        self::ENCRYPTEDDOCUMENTSALLOWED => array(
+            'name' => 'EncryptedDocumentsAllowed',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_BOOL,
+        ),
     );
 
     /**
@@ -61,6 +67,7 @@ class Box extends \ProtobufMessage
         $this->values[self::TITLE] = null;
         $this->values[self::ORGANIZATION] = null;
         $this->values[self::INVOICEFORMATVERSION] = self::$fields[self::INVOICEFORMATVERSION]['default'];
+        $this->values[self::ENCRYPTEDDOCUMENTSALLOWED] = null;
     }
 
     /**
@@ -162,6 +169,29 @@ class Box extends \ProtobufMessage
     {
         $value = $this->get(self::INVOICEFORMATVERSION);
         return $value === null ? (integer)$value : $value;
+    }
+
+    /**
+     * Sets value of 'EncryptedDocumentsAllowed' property
+     *
+     * @param boolean $value Property value
+     *
+     * @return null
+     */
+    public function setEncryptedDocumentsAllowed($value)
+    {
+        return $this->set(self::ENCRYPTEDDOCUMENTSALLOWED, $value);
+    }
+
+    /**
+     * Returns value of 'EncryptedDocumentsAllowed' property
+     *
+     * @return boolean
+     */
+    public function getEncryptedDocumentsAllowed()
+    {
+        $value = $this->get(self::ENCRYPTEDDOCUMENTSALLOWED);
+        return $value === null ? (boolean)$value : $value;
     }
 }
 }

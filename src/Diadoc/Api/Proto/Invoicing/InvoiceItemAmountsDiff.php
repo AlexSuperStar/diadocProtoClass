@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from InvoiceInfo.proto at 2016-10-06 18:08:58
- *
+* Auto generated from InvoiceInfo.proto
+*
  * Diadoc.Api.Proto.Invoicing package
  */
 
@@ -36,7 +36,7 @@ class InvoiceItemAmountsDiff extends \ProtobufMessage
         ),
         self::SUBTOTAL => array(
             'name' => 'Subtotal',
-            'required' => true,
+            'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
     );

@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DocumentInfo.proto at 2016-10-06 18:08:10
- *
+* Auto generated from DocumentInfo.proto
+*
  * Diadoc.Api.Proto.Docflow package
  */
 
@@ -26,6 +26,9 @@ class DocumentInfo extends \ProtobufMessage
     const PRICELISTINFO = 12;
     const CONTRACTINFO = 13;
     const SUPPLEMENTARYAGREEMENTINFO = 14;
+    const UNIVERSALTRANSFERDOCUMENTINFO = 15;
+    const UNIVERSALCORRECTIONDOCUMENTINFO = 16;
+    const ATTACHMENTVERSION = 17;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -101,6 +104,21 @@ class DocumentInfo extends \ProtobufMessage
             'required' => false,
             'type' => '\Diadoc\Api\Proto\Docflow\SupplementaryAgreementDocumentInfo'
         ),
+        self::UNIVERSALTRANSFERDOCUMENTINFO => array(
+            'name' => 'UniversalTransferDocumentInfo',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Docflow\UniversalTransferDocumentInfo'
+        ),
+        self::UNIVERSALCORRECTIONDOCUMENTINFO => array(
+            'name' => 'UniversalCorrectionDocumentInfo',
+            'required' => false,
+            'type' => '\Diadoc\Api\Proto\Docflow\UniversalCorrectionDocumentInfo'
+        ),
+        self::ATTACHMENTVERSION => array(
+            'name' => 'AttachmentVersion',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
     );
 
     /**
@@ -132,6 +150,9 @@ class DocumentInfo extends \ProtobufMessage
         $this->values[self::PRICELISTINFO] = null;
         $this->values[self::CONTRACTINFO] = null;
         $this->values[self::SUPPLEMENTARYAGREEMENTINFO] = null;
+        $this->values[self::UNIVERSALTRANSFERDOCUMENTINFO] = null;
+        $this->values[self::UNIVERSALCORRECTIONDOCUMENTINFO] = null;
+        $this->values[self::ATTACHMENTVERSION] = null;
     }
 
     /**
@@ -457,6 +478,73 @@ class DocumentInfo extends \ProtobufMessage
     public function getSupplementaryAgreementInfo()
     {
         return $this->get(self::SUPPLEMENTARYAGREEMENTINFO);
+    }
+
+    /**
+     * Sets value of 'UniversalTransferDocumentInfo' property
+     *
+     * @param \Diadoc\Api\Proto\Docflow\UniversalTransferDocumentInfo $value Property value
+     *
+     * @return null
+     */
+    public function setUniversalTransferDocumentInfo(\Diadoc\Api\Proto\Docflow\UniversalTransferDocumentInfo $value=null)
+    {
+        return $this->set(self::UNIVERSALTRANSFERDOCUMENTINFO, $value);
+    }
+
+    /**
+     * Returns value of 'UniversalTransferDocumentInfo' property
+     *
+     * @return \Diadoc\Api\Proto\Docflow\UniversalTransferDocumentInfo
+     */
+    public function getUniversalTransferDocumentInfo()
+    {
+        return $this->get(self::UNIVERSALTRANSFERDOCUMENTINFO);
+    }
+
+    /**
+     * Sets value of 'UniversalCorrectionDocumentInfo' property
+     *
+     * @param \Diadoc\Api\Proto\Docflow\UniversalCorrectionDocumentInfo $value Property value
+     *
+     * @return null
+     */
+    public function setUniversalCorrectionDocumentInfo(\Diadoc\Api\Proto\Docflow\UniversalCorrectionDocumentInfo $value=null)
+    {
+        return $this->set(self::UNIVERSALCORRECTIONDOCUMENTINFO, $value);
+    }
+
+    /**
+     * Returns value of 'UniversalCorrectionDocumentInfo' property
+     *
+     * @return \Diadoc\Api\Proto\Docflow\UniversalCorrectionDocumentInfo
+     */
+    public function getUniversalCorrectionDocumentInfo()
+    {
+        return $this->get(self::UNIVERSALCORRECTIONDOCUMENTINFO);
+    }
+
+    /**
+     * Sets value of 'AttachmentVersion' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setAttachmentVersion($value)
+    {
+        return $this->set(self::ATTACHMENTVERSION, $value);
+    }
+
+    /**
+     * Returns value of 'AttachmentVersion' property
+     *
+     * @return string
+     */
+    public function getAttachmentVersion()
+    {
+        $value = $this->get(self::ATTACHMENTVERSION);
+        return $value === null ? (string)$value : $value;
     }
 }
 }

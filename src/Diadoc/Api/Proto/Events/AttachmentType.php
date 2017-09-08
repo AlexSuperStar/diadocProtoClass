@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-GetApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-GetApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -50,9 +50,17 @@ final class AttachmentType
     const ServiceDetails = 38;
     const RoamingNotification = 39;
     const SupplementaryAgreement = 40;
+    const UniversalTransferDocument = 41;
+    const UniversalTransferDocumentBuyerTitle = 42;
+    const UniversalTransferDocumentRevision = 45;
+    const UniversalCorrectionDocument = 49;
+    const UniversalCorrectionDocumentRevision = 50;
+    const UniversalCorrectionDocumentBuyerTitle = 51;
     const CustomData = 64;
     const MoveDocument = 65;
-    const ResolutionChainAssignmentAttachment = 66;
+    const ResolutionRouteAssignmentAttachment = 66;
+    const ResolutionRouteRemovalAttachment = 67;
+    const Cancellation = 69;
 
     /**
      * Returns defined enum values
@@ -101,9 +109,17 @@ final class AttachmentType
             'ServiceDetails' => self::ServiceDetails,
             'RoamingNotification' => self::RoamingNotification,
             'SupplementaryAgreement' => self::SupplementaryAgreement,
+            'UniversalTransferDocument' => self::UniversalTransferDocument,
+            'UniversalTransferDocumentBuyerTitle' => self::UniversalTransferDocumentBuyerTitle,
+            'UniversalTransferDocumentRevision' => self::UniversalTransferDocumentRevision,
+            'UniversalCorrectionDocument' => self::UniversalCorrectionDocument,
+            'UniversalCorrectionDocumentRevision' => self::UniversalCorrectionDocumentRevision,
+            'UniversalCorrectionDocumentBuyerTitle' => self::UniversalCorrectionDocumentBuyerTitle,
             'CustomData' => self::CustomData,
             'MoveDocument' => self::MoveDocument,
-            'ResolutionChainAssignmentAttachment' => self::ResolutionChainAssignmentAttachment,
+            'ResolutionRouteAssignmentAttachment' => self::ResolutionRouteAssignmentAttachment,
+            'ResolutionRouteRemovalAttachment' => self::ResolutionRouteRemovalAttachment,
+            'Cancellation' => self::Cancellation,
         );
     }
 }

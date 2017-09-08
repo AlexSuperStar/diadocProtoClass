@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from InvoiceInfo.proto at 2016-10-06 18:08:58
- *
+* Auto generated from InvoiceInfo.proto
+*
  * Diadoc.Api.Proto.Invoicing package
  */
 
@@ -18,6 +18,7 @@ final class TaxRate
     const Percent_20 = 4;
     const Fraction_10_110 = 5;
     const Fraction_18_118 = 6;
+    const TaxRateNotSpecified = 7;
 
     /**
      * Returns defined enum values
@@ -34,6 +35,7 @@ final class TaxRate
             'Percent_20' => self::Percent_20,
             'Fraction_10_110' => self::Fraction_10_110,
             'Fraction_18_118' => self::Fraction_18_118,
+            'TaxRateNotSpecified' => self::TaxRateNotSpecified,
         );
     }
 }

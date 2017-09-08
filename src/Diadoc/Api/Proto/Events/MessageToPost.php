@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -43,6 +43,8 @@ class MessageToPost extends \ProtobufMessage
     const ENCRYPTEDXMLACCEPTANCECERTIFICATESELLERTITLES = 30;
     const SUPPLEMENTARYAGREEMENTS = 31;
     const LOCKPACKET = 32;
+    const UNIVERSALTRANSFERDOCUMENTSELLERTITLES = 33;
+    const CUSTOMDOCUMENTATTACHMENTS = 34;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -207,6 +209,16 @@ class MessageToPost extends \ProtobufMessage
             'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_BOOL,
         ),
+        self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES => array(
+            'name' => 'UniversalTransferDocumentSellerTitles',
+            'repeated' => true,
+            'type' => '\Diadoc\Api\Proto\Events\XmlDocumentAttachment'
+        ),
+        self::CUSTOMDOCUMENTATTACHMENTS => array(
+            'name' => 'CustomDocumentAttachments',
+            'repeated' => true,
+            'type' => '\Diadoc\Api\Proto\Events\CustomDocumentAttachment'
+        ),
     );
 
     /**
@@ -255,6 +267,8 @@ class MessageToPost extends \ProtobufMessage
         $this->values[self::ENCRYPTEDXMLACCEPTANCECERTIFICATESELLERTITLES] = array();
         $this->values[self::SUPPLEMENTARYAGREEMENTS] = array();
         $this->values[self::LOCKPACKET] = self::$fields[self::LOCKPACKET]['default'];
+        $this->values[self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES] = array();
+        $this->values[self::CUSTOMDOCUMENTATTACHMENTS] = array();
     }
 
     /**
@@ -1757,6 +1771,134 @@ class MessageToPost extends \ProtobufMessage
     {
         $value = $this->get(self::LOCKPACKET);
         return $value === null ? (boolean)$value : $value;
+    }
+
+    /**
+     * Appends value to 'UniversalTransferDocumentSellerTitles' list
+     *
+     * @param \Diadoc\Api\Proto\Events\XmlDocumentAttachment $value Value to append
+     *
+     * @return null
+     */
+    public function appendUniversalTransferDocumentSellerTitles(\Diadoc\Api\Proto\Events\XmlDocumentAttachment $value)
+    {
+        return $this->append(self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES, $value);
+    }
+
+    /**
+     * Clears 'UniversalTransferDocumentSellerTitles' list
+     *
+     * @return null
+     */
+    public function clearUniversalTransferDocumentSellerTitles()
+    {
+        return $this->clear(self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES);
+    }
+
+    /**
+     * Returns 'UniversalTransferDocumentSellerTitles' list
+     *
+     * @return \Diadoc\Api\Proto\Events\XmlDocumentAttachment[]
+     */
+    public function getUniversalTransferDocumentSellerTitles()
+    {
+        return $this->get(self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES);
+    }
+
+    /**
+     * Returns 'UniversalTransferDocumentSellerTitles' iterator
+     *
+     * @return \ArrayIterator
+     */
+    public function getUniversalTransferDocumentSellerTitlesIterator()
+    {
+        return new \ArrayIterator($this->get(self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES));
+    }
+
+    /**
+     * Returns element from 'UniversalTransferDocumentSellerTitles' list at given offset
+     *
+     * @param int $offset Position in list
+     *
+     * @return \Diadoc\Api\Proto\Events\XmlDocumentAttachment
+     */
+    public function getUniversalTransferDocumentSellerTitlesAt($offset)
+    {
+        return $this->get(self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES, $offset);
+    }
+
+    /**
+     * Returns count of 'UniversalTransferDocumentSellerTitles' list
+     *
+     * @return int
+     */
+    public function getUniversalTransferDocumentSellerTitlesCount()
+    {
+        return $this->count(self::UNIVERSALTRANSFERDOCUMENTSELLERTITLES);
+    }
+
+    /**
+     * Appends value to 'CustomDocumentAttachments' list
+     *
+     * @param \Diadoc\Api\Proto\Events\CustomDocumentAttachment $value Value to append
+     *
+     * @return null
+     */
+    public function appendCustomDocumentAttachments(\Diadoc\Api\Proto\Events\CustomDocumentAttachment $value)
+    {
+        return $this->append(self::CUSTOMDOCUMENTATTACHMENTS, $value);
+    }
+
+    /**
+     * Clears 'CustomDocumentAttachments' list
+     *
+     * @return null
+     */
+    public function clearCustomDocumentAttachments()
+    {
+        return $this->clear(self::CUSTOMDOCUMENTATTACHMENTS);
+    }
+
+    /**
+     * Returns 'CustomDocumentAttachments' list
+     *
+     * @return \Diadoc\Api\Proto\Events\CustomDocumentAttachment[]
+     */
+    public function getCustomDocumentAttachments()
+    {
+        return $this->get(self::CUSTOMDOCUMENTATTACHMENTS);
+    }
+
+    /**
+     * Returns 'CustomDocumentAttachments' iterator
+     *
+     * @return \ArrayIterator
+     */
+    public function getCustomDocumentAttachmentsIterator()
+    {
+        return new \ArrayIterator($this->get(self::CUSTOMDOCUMENTATTACHMENTS));
+    }
+
+    /**
+     * Returns element from 'CustomDocumentAttachments' list at given offset
+     *
+     * @param int $offset Position in list
+     *
+     * @return \Diadoc\Api\Proto\Events\CustomDocumentAttachment
+     */
+    public function getCustomDocumentAttachmentsAt($offset)
+    {
+        return $this->get(self::CUSTOMDOCUMENTATTACHMENTS, $offset);
+    }
+
+    /**
+     * Returns count of 'CustomDocumentAttachments' list
+     *
+     * @return int
+     */
+    public function getCustomDocumentAttachmentsCount()
+    {
+        return $this->count(self::CUSTOMDOCUMENTATTACHMENTS);
     }
 }
 }

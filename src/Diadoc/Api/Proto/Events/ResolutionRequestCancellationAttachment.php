@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -13,12 +13,18 @@ class ResolutionRequestCancellationAttachment extends \ProtobufMessage
 {
     /* Field index constants */
     const INITIALRESOLUTIONREQUESTID = 1;
+    const COMMENT = 2;
 
     /* @var array Field descriptors */
     protected static $fields = array(
         self::INITIALRESOLUTIONREQUESTID => array(
             'name' => 'InitialResolutionRequestId',
             'required' => true,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
+        ),
+        self::COMMENT => array(
+            'name' => 'Comment',
+            'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
     );
@@ -39,6 +45,7 @@ class ResolutionRequestCancellationAttachment extends \ProtobufMessage
     public function reset()
     {
         $this->values[self::INITIALRESOLUTIONREQUESTID] = null;
+        $this->values[self::COMMENT] = null;
     }
 
     /**
@@ -71,6 +78,29 @@ class ResolutionRequestCancellationAttachment extends \ProtobufMessage
     public function getInitialResolutionRequestId()
     {
         $value = $this->get(self::INITIALRESOLUTIONREQUESTID);
+        return $value === null ? (string)$value : $value;
+    }
+
+    /**
+     * Sets value of 'Comment' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setComment($value)
+    {
+        return $this->set(self::COMMENT, $value);
+    }
+
+    /**
+     * Returns value of 'Comment' property
+     *
+     * @return string
+     */
+    public function getComment()
+    {
+        $value = $this->get(self::COMMENT);
         return $value === null ? (string)$value : $value;
     }
 }

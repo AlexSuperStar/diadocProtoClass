@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 

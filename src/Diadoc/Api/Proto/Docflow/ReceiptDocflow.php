@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from ReceiptDocflow.proto at 2016-10-06 18:08:10
- *
+* Auto generated from ReceiptDocflow.proto
+*
  * Diadoc.Api.Proto.Docflow package
  */
 

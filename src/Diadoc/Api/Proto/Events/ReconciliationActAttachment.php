@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -56,8 +56,9 @@ class ReconciliationActAttachment extends \ProtobufMessage
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::DOCUMENTNUMBER => array(
+            'default' => '',
             'name' => 'DocumentNumber',
-            'required' => true,
+            'required' => false,
             'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
         self::CUSTOMDOCUMENTID => array(
@@ -99,7 +100,7 @@ class ReconciliationActAttachment extends \ProtobufMessage
         $this->values[self::INITIALDOCUMENTIDS] = array();
         $this->values[self::SUBORDINATEDOCUMENTIDS] = array();
         $this->values[self::DOCUMENTDATE] = null;
-        $this->values[self::DOCUMENTNUMBER] = null;
+        $this->values[self::DOCUMENTNUMBER] = self::$fields[self::DOCUMENTNUMBER]['default'];
         $this->values[self::CUSTOMDOCUMENTID] = null;
         $this->values[self::NEEDRECEIPT] = self::$fields[self::NEEDRECEIPT]['default'];
         $this->values[self::CUSTOMDATA] = array();

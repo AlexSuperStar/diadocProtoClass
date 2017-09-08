@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from Address.proto at 2016-10-06 18:08:58
- *
+* Auto generated from Address.proto
+*
  * Diadoc.Api.Proto package
  */
 
@@ -14,6 +14,7 @@ class Address extends \ProtobufMessage
     /* Field index constants */
     const RUSSIANADDRESS = 1;
     const FOREIGNADDRESS = 2;
+    const ADDRESSCODE = 3;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -26,6 +27,11 @@ class Address extends \ProtobufMessage
             'name' => 'ForeignAddress',
             'required' => false,
             'type' => '\Diadoc\Api\Proto\ForeignAddress'
+        ),
+        self::ADDRESSCODE => array(
+            'name' => 'AddressCode',
+            'required' => false,
+            'type' => \ProtobufMessage::PB_TYPE_STRING,
         ),
     );
 
@@ -46,6 +52,7 @@ class Address extends \ProtobufMessage
     {
         $this->values[self::RUSSIANADDRESS] = null;
         $this->values[self::FOREIGNADDRESS] = null;
+        $this->values[self::ADDRESSCODE] = null;
     }
 
     /**
@@ -100,6 +107,29 @@ class Address extends \ProtobufMessage
     public function getForeignAddress()
     {
         return $this->get(self::FOREIGNADDRESS);
+    }
+
+    /**
+     * Sets value of 'AddressCode' property
+     *
+     * @param string $value Property value
+     *
+     * @return null
+     */
+    public function setAddressCode($value)
+    {
+        return $this->set(self::ADDRESSCODE, $value);
+    }
+
+    /**
+     * Returns value of 'AddressCode' property
+     *
+     * @return string
+     */
+    public function getAddressCode()
+    {
+        $value = $this->get(self::ADDRESSCODE);
+        return $value === null ? (string)$value : $value;
     }
 }
 }

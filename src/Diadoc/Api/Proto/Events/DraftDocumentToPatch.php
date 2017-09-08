@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -15,6 +15,7 @@ class DraftDocumentToPatch extends \ProtobufMessage
     const DOCUMENTID = 1;
     const TOBOXID = 2;
     const SIGNER = 3;
+    const EXTENDEDSIGNER = 4;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -32,6 +33,11 @@ class DraftDocumentToPatch extends \ProtobufMessage
             'name' => 'Signer',
             'required' => false,
             'type' => '\Diadoc\Api\Proto\Invoicing\Signer'
+        ),
+        self::EXTENDEDSIGNER => array(
+            'name' => 'ExtendedSigner',
+            'repeated' => true,
+            'type' => '\Diadoc\Api\Proto\Invoicing\Signers\ExtendedSigner'
         ),
     );
 
@@ -53,6 +59,7 @@ class DraftDocumentToPatch extends \ProtobufMessage
         $this->values[self::DOCUMENTID] = null;
         $this->values[self::TOBOXID] = null;
         $this->values[self::SIGNER] = null;
+        $this->values[self::EXTENDEDSIGNER] = array();
     }
 
     /**
@@ -130,6 +137,70 @@ class DraftDocumentToPatch extends \ProtobufMessage
     public function getSigner()
     {
         return $this->get(self::SIGNER);
+    }
+
+    /**
+     * Appends value to 'ExtendedSigner' list
+     *
+     * @param \Diadoc\Api\Proto\Invoicing\Signers\ExtendedSigner $value Value to append
+     *
+     * @return null
+     */
+    public function appendExtendedSigner(\Diadoc\Api\Proto\Invoicing\Signers\ExtendedSigner $value)
+    {
+        return $this->append(self::EXTENDEDSIGNER, $value);
+    }
+
+    /**
+     * Clears 'ExtendedSigner' list
+     *
+     * @return null
+     */
+    public function clearExtendedSigner()
+    {
+        return $this->clear(self::EXTENDEDSIGNER);
+    }
+
+    /**
+     * Returns 'ExtendedSigner' list
+     *
+     * @return \Diadoc\Api\Proto\Invoicing\Signers\ExtendedSigner[]
+     */
+    public function getExtendedSigner()
+    {
+        return $this->get(self::EXTENDEDSIGNER);
+    }
+
+    /**
+     * Returns 'ExtendedSigner' iterator
+     *
+     * @return \ArrayIterator
+     */
+    public function getExtendedSignerIterator()
+    {
+        return new \ArrayIterator($this->get(self::EXTENDEDSIGNER));
+    }
+
+    /**
+     * Returns element from 'ExtendedSigner' list at given offset
+     *
+     * @param int $offset Position in list
+     *
+     * @return \Diadoc\Api\Proto\Invoicing\Signers\ExtendedSigner
+     */
+    public function getExtendedSignerAt($offset)
+    {
+        return $this->get(self::EXTENDEDSIGNER, $offset);
+    }
+
+    /**
+     * Returns count of 'ExtendedSigner' list
+     *
+     * @return int
+     */
+    public function getExtendedSignerCount()
+    {
+        return $this->count(self::EXTENDEDSIGNER);
     }
 }
 }

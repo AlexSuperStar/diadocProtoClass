@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from RevocationDocflow.proto at 2016-10-06 18:08:10
- *
+* Auto generated from RevocationDocflow.proto
+*
  * Diadoc.Api.Proto.Docflow package
  */
 

@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from ForwardedDocument.proto at 2016-10-06 18:08:10
- *
+* Auto generated from ForwardedDocument.proto
+*
  * Diadoc.Api.Proto.Forwarding package
  */
 

@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DocflowApi.proto at 2016-10-06 18:03:23
- *
+* Auto generated from DocflowApi.proto
+*
  * Diadoc.Api.Proto.Docflow package
  */
 

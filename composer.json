@@ -2,7 +2,7 @@
     "name": "alexsuperstar/diadocprotoclass",
     "description": "PHP Diadoc Proto Class",
     "type": "library",
-    "version": "0.2.3",
+    "version": "0.2.0",
     "authors": [
         {
             "name": "Alexey Starikov",
@@ -14,6 +14,5 @@
         "psr-4": {    
             "Diadoc\\": "src/Diadoc/"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }

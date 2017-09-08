@@ -1,7 +1,7 @@
 <?php
 /**
- * Auto generated from DiadocMessage-PostApi.proto at 2016-09-02 13:31:45
- *
+* Auto generated from DiadocMessage-PostApi.proto
+*
  * Diadoc.Api.Proto.Events package
  */
 
@@ -28,9 +28,11 @@ class MessagePatchToPost extends \ProtobufMessage
     const REVOCATIONREQUESTS = 14;
     const XMLSIGNATUREREJECTIONS = 15;
     const CUSTOMDATAPATCHES = 16;
-    const RESOLUTIONCHAINASSIGNMENTS = 17;
+    const RESOLUTIONROUTEASSIGNMENTS = 17;
     const SIGNATUREVERIFICATIONS = 18;
     const EDITDOCUMENTPACKETCOMMANDS = 19;
+    const UNIVERSALTRANSFERDOCUMENTBUYERTITLES = 20;
+    const RESOLUTIONROUTEREMOVALS = 21;
 
     /* @var array Field descriptors */
     protected static $fields = array(
@@ -114,10 +116,10 @@ class MessagePatchToPost extends \ProtobufMessage
             'repeated' => true,
             'type' => '\Diadoc\Api\Proto\Events\CustomDataPatch'
         ),
-        self::RESOLUTIONCHAINASSIGNMENTS => array(
-            'name' => 'ResolutionChainAssignments',
+        self::RESOLUTIONROUTEASSIGNMENTS => array(
+            'name' => 'ResolutionRouteAssignments',
             'repeated' => true,
-            'type' => '\Diadoc\Api\Proto\Events\ResolutionChainAssignment'
+            'type' => '\Diadoc\Api\Proto\Events\ResolutionRouteAssignment'
         ),
         self::SIGNATUREVERIFICATIONS => array(
             'name' => 'SignatureVerifications',
@@ -128,6 +130,16 @@ class MessagePatchToPost extends \ProtobufMessage
             'name' => 'EditDocumentPacketCommands',
             'repeated' => true,
             'type' => '\Diadoc\Api\Proto\Events\EditDocumentPacketCommand'
+        ),
+        self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES => array(
+            'name' => 'UniversalTransferDocumentBuyerTitles',
+            'repeated' => true,
+            'type' => '\Diadoc\Api\Proto\Events\ReceiptAttachment'
+        ),
+        self::RESOLUTIONROUTEREMOVALS => array(
+            'name' => 'ResolutionRouteRemovals',
+            'repeated' => true,
+            'type' => '\Diadoc\Api\Proto\Events\ResolutionRouteRemoval'
         ),
     );
 
@@ -162,9 +174,11 @@ class MessagePatchToPost extends \ProtobufMessage
         $this->values[self::REVOCATIONREQUESTS] = array();
         $this->values[self::XMLSIGNATUREREJECTIONS] = array();
         $this->values[self::CUSTOMDATAPATCHES] = array();
-        $this->values[self::RESOLUTIONCHAINASSIGNMENTS] = array();
+        $this->values[self::RESOLUTIONROUTEASSIGNMENTS] = array();
         $this->values[self::SIGNATUREVERIFICATIONS] = array();
         $this->values[self::EDITDOCUMENTPACKETCOMMANDS] = array();
+        $this->values[self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES] = array();
+        $this->values[self::RESOLUTIONROUTEREMOVALS] = array();
     }
 
     /**
@@ -1120,67 +1134,67 @@ class MessagePatchToPost extends \ProtobufMessage
     }
 
     /**
-     * Appends value to 'ResolutionChainAssignments' list
+     * Appends value to 'ResolutionRouteAssignments' list
      *
-     * @param \Diadoc\Api\Proto\Events\ResolutionChainAssignment $value Value to append
-     *
-     * @return null
-     */
-    public function appendResolutionChainAssignments(\Diadoc\Api\Proto\Events\ResolutionChainAssignment $value)
-    {
-        return $this->append(self::RESOLUTIONCHAINASSIGNMENTS, $value);
-    }
-
-    /**
-     * Clears 'ResolutionChainAssignments' list
+     * @param \Diadoc\Api\Proto\Events\ResolutionRouteAssignment $value Value to append
      *
      * @return null
      */
-    public function clearResolutionChainAssignments()
+    public function appendResolutionRouteAssignments(\Diadoc\Api\Proto\Events\ResolutionRouteAssignment $value)
     {
-        return $this->clear(self::RESOLUTIONCHAINASSIGNMENTS);
+        return $this->append(self::RESOLUTIONROUTEASSIGNMENTS, $value);
     }
 
     /**
-     * Returns 'ResolutionChainAssignments' list
+     * Clears 'ResolutionRouteAssignments' list
      *
-     * @return \Diadoc\Api\Proto\Events\ResolutionChainAssignment[]
+     * @return null
      */
-    public function getResolutionChainAssignments()
+    public function clearResolutionRouteAssignments()
     {
-        return $this->get(self::RESOLUTIONCHAINASSIGNMENTS);
+        return $this->clear(self::RESOLUTIONROUTEASSIGNMENTS);
     }
 
     /**
-     * Returns 'ResolutionChainAssignments' iterator
+     * Returns 'ResolutionRouteAssignments' list
+     *
+     * @return \Diadoc\Api\Proto\Events\ResolutionRouteAssignment[]
+     */
+    public function getResolutionRouteAssignments()
+    {
+        return $this->get(self::RESOLUTIONROUTEASSIGNMENTS);
+    }
+
+    /**
+     * Returns 'ResolutionRouteAssignments' iterator
      *
      * @return \ArrayIterator
      */
-    public function getResolutionChainAssignmentsIterator()
+    public function getResolutionRouteAssignmentsIterator()
     {
-        return new \ArrayIterator($this->get(self::RESOLUTIONCHAINASSIGNMENTS));
+        return new \ArrayIterator($this->get(self::RESOLUTIONROUTEASSIGNMENTS));
     }
 
     /**
-     * Returns element from 'ResolutionChainAssignments' list at given offset
+     * Returns element from 'ResolutionRouteAssignments' list at given offset
      *
      * @param int $offset Position in list
      *
-     * @return \Diadoc\Api\Proto\Events\ResolutionChainAssignment
+     * @return \Diadoc\Api\Proto\Events\ResolutionRouteAssignment
      */
-    public function getResolutionChainAssignmentsAt($offset)
+    public function getResolutionRouteAssignmentsAt($offset)
     {
-        return $this->get(self::RESOLUTIONCHAINASSIGNMENTS, $offset);
+        return $this->get(self::RESOLUTIONROUTEASSIGNMENTS, $offset);
     }
 
     /**
-     * Returns count of 'ResolutionChainAssignments' list
+     * Returns count of 'ResolutionRouteAssignments' list
      *
      * @return int
      */
-    public function getResolutionChainAssignmentsCount()
+    public function getResolutionRouteAssignmentsCount()
     {
-        return $this->count(self::RESOLUTIONCHAINASSIGNMENTS);
+        return $this->count(self::RESOLUTIONROUTEASSIGNMENTS);
     }
 
     /**
@@ -1309,6 +1323,134 @@ class MessagePatchToPost extends \ProtobufMessage
     public function getEditDocumentPacketCommandsCount()
     {
         return $this->count(self::EDITDOCUMENTPACKETCOMMANDS);
+    }
+
+    /**
+     * Appends value to 'UniversalTransferDocumentBuyerTitles' list
+     *
+     * @param \Diadoc\Api\Proto\Events\ReceiptAttachment $value Value to append
+     *
+     * @return null
+     */
+    public function appendUniversalTransferDocumentBuyerTitles(\Diadoc\Api\Proto\Events\ReceiptAttachment $value)
+    {
+        return $this->append(self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES, $value);
+    }
+
+    /**
+     * Clears 'UniversalTransferDocumentBuyerTitles' list
+     *
+     * @return null
+     */
+    public function clearUniversalTransferDocumentBuyerTitles()
+    {
+        return $this->clear(self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES);
+    }
+
+    /**
+     * Returns 'UniversalTransferDocumentBuyerTitles' list
+     *
+     * @return \Diadoc\Api\Proto\Events\ReceiptAttachment[]
+     */
+    public function getUniversalTransferDocumentBuyerTitles()
+    {
+        return $this->get(self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES);
+    }
+
+    /**
+     * Returns 'UniversalTransferDocumentBuyerTitles' iterator
+     *
+     * @return \ArrayIterator
+     */
+    public function getUniversalTransferDocumentBuyerTitlesIterator()
+    {
+        return new \ArrayIterator($this->get(self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES));
+    }
+
+    /**
+     * Returns element from 'UniversalTransferDocumentBuyerTitles' list at given offset
+     *
+     * @param int $offset Position in list
+     *
+     * @return \Diadoc\Api\Proto\Events\ReceiptAttachment
+     */
+    public function getUniversalTransferDocumentBuyerTitlesAt($offset)
+    {
+        return $this->get(self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES, $offset);
+    }
+
+    /**
+     * Returns count of 'UniversalTransferDocumentBuyerTitles' list
+     *
+     * @return int
+     */
+    public function getUniversalTransferDocumentBuyerTitlesCount()
+    {
+        return $this->count(self::UNIVERSALTRANSFERDOCUMENTBUYERTITLES);
+    }
+
+    /**
+     * Appends value to 'ResolutionRouteRemovals' list
+     *
+     * @param \Diadoc\Api\Proto\Events\ResolutionRouteRemoval $value Value to append
+     *
+     * @return null
+     */
+    public function appendResolutionRouteRemovals(\Diadoc\Api\Proto\Events\ResolutionRouteRemoval $value)
+    {
+        return $this->append(self::RESOLUTIONROUTEREMOVALS, $value);
+    }
+
+    /**
+     * Clears 'ResolutionRouteRemovals' list
+     *
+     * @return null
+     */
+    public function clearResolutionRouteRemovals()
+    {
+        return $this->clear(self::RESOLUTIONROUTEREMOVALS);
+    }
+
+    /**
+     * Returns 'ResolutionRouteRemovals' list
+     *
+     * @return \Diadoc\Api\Proto\Events\ResolutionRouteRemoval[]
+     */
+    public function getResolutionRouteRemovals()
+    {
+        return $this->get(self::RESOLUTIONROUTEREMOVALS);
+    }
+
+    /**
+     * Returns 'ResolutionRouteRemovals' iterator
+     *
+     * @return \ArrayIterator
+     */
+    public function getResolutionRouteRemovalsIterator()
+    {
+        return new \ArrayIterator($this->get(self::RESOLUTIONROUTEREMOVALS));
+    }
+
+    /**
+     * Returns element from 'ResolutionRouteRemovals' list at given offset
+     *
+     * @param int $offset Position in list
+     *
+     * @return \Diadoc\Api\Proto\Events\ResolutionRouteRemoval
+     */
+    public function getResolutionRouteRemovalsAt($offset)
+    {
+        return $this->get(self::RESOLUTIONROUTEREMOVALS, $offset);
+    }
+
+    /**
+     * Returns count of 'ResolutionRouteRemovals' list
+     *
+     * @return int
+     */
+    public function getResolutionRouteRemovalsCount()
+    {
+        return $this->count(self::RESOLUTIONROUTEREMOVALS);
     }
 }
 }
